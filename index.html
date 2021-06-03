@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number</title>
+
+
+    <!--Bootstrap_CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Google_fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+
+    <!--My_CSS-->
+    <link rel="stylesheet" href="asset/css/style.css">
+
+</head>
+<body>
+    <!--head-start-->
+        <div class="container-fluid div1">
+            <div class="row">
+                <div class="col-12 col-md-8 offset-md-2 col-lg-4 offset-lg-4 heading-col">
+                    <h1 class="heading1">
+                        Lets Play With Numbers
+                    </h1>
+                </div>
+            </div>
+        </div>
+    <!--head-end-->
+
+    <!--body-start-->
+        <div class="container-fluid div2 color1">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Calculator</h1>
+                    <p class="pera1">
+                        In 1642, 
+                        the first true “calculator” was invented: 
+                        one that performed calculations through a 
+                        clockwork-type of mechanism. The Pascal calculator, 
+                        invented by French inventor and mathematician Blaise Pascal, 
+                        was lauded for attempting arithmetic calculations previously 
+                        thought impossible.
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <h1 id="calculatorOutput" class="output-box "></h1>
+                    <div class="row">
+                        <div class="col-3 no-margin-right ">
+                            <button class="button" onclick="inputNumber(7)">7</button>
+                        </div>
+                        <div class="col-3 no-margin ">
+                            <button class="button" onclick="inputNumber(8)">8</button>
+                        </div>
+                        <div class="col-3 no-margin ">
+                            <button class="button" onclick="inputNumber(9)">9</button>
+                        </div>
+                        <div class="col-3 no-margin-left ">
+                            <button class="button" onclick="inputOparator('/')">/</button>
+                        </div>
+                    </div>
+                    <div class="row no-margin-row">
+                        <div class="col-3 no-margin-right ">
+                            <button class="button" onclick="inputNumber(4)">4</button>
+                        </div>
+                        <div class="col-3 no-margin ">
+                            <button class="button" onclick="inputNumber(5)">5</button>
+                        </div>
+                        <div class="col-3 no-margin ">
+                            <button class="button" onclick="inputNumber(6)">6</button>
+                        </div>
+                        <div class="col-3 no-margin-left ">
+                            <button class="button" onclick="inputOparator('*')">*</button>
+                        </div>
+                    </div>
+                    <div class="row no-margin-row">
+                        <div class="col-3 no-margin-right ">
+                            <button class="button" onclick="inputNumber(1)">1</button>
+                        </div>
+                        <div class="col-3 no-margin ">
+                            <button class="button" onclick="inputNumber(2)">2</button>
+                        </div>
+                        <div class="col-3 no-margin">
+                            <button class="button" onclick="inputNumber(3)">3</button>
+                        </div>
+                        <div class="col-3 no-margin-left">
+                            <button class="button" onclick="inputOparator('+')">+</button>
+                        </div>
+                    </div>
+                    <div class="row no-margin-row">
+                        <div class="col-3 no-margin-right ">
+                            <button class="button" onclick="Percentage()">%</button>
+                        </div>
+                        <div class="col-3 no-margin">
+                            <button class="button" onclick="inputNumber(0)">0</button>
+                        </div>
+                        <div class="col-3 no-margin">
+                            <button class="button" onclick="inputOparator('.')">.</button>
+                        </div>
+                        <div class="col-3 no-margin-left">
+                            <button class="button" onclick="inputOparator('-')">-</button>
+                        </div>
+                    </div>
+                    <div class="row no-margin-row">
+                        <div class="col-6 no-margin-right ">
+                            <button class="button radious-left" onclick="Clear()">Clear</button>
+                        </div>
+                        <div class="col-3 no-margin ">
+                            <button class="button" onclick="Backspace()"><i class="fas fa-backspace"></i></button>
+                        </div>
+                        <div class="col-3 no-margin-left ">
+                            <button class="button radious-right" onclick="Result()">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid div2 color2">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Types of Number</h1>
+                    <p class="pera1">
+                        1. Positive numbers: Real numbers that are greater than zero.
+                    </p>
+                    <p class="pera1">
+                        2. Negative numbers: Real numbers that are less than zero.
+                    </p>
+                    <p class="pera1">
+                        3. Prime number: A positive integer with exactly two positive divisors: itself and 1. 
+                    </p>
+                    <p class="pera1">
+                        4. Composite number: A positive integer that can be factored into a product of smaller positive integers
+                    </p>
+                    <p class="pera1">
+                        5. Decimal: The standard Hindu–Arabic numeral system using base ten.
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <input id="typeOutput" type="number" class="output-box">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <button class="button radious-bottom" onclick="checkType()">Check type</button>
+                        </div>
+                    </div>
+                    <p id="typeOutput1" class="pera1 margint-top-pera"></p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid div2 color3">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Factorial</h1>
+                    <p class="pera1">
+                        In mathematics, the factorial of 
+                        a non-negative integer n, denoted by 
+                        n!, is the product of all positive 
+                        integers less than or equal to n.
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <input id="factorial" type="number" class="output-box">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <button class="button radious-bottom" onclick="checkFactorial()">Factorial</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid div2 color4">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Logarithm</h1>
+                    <p class="pera1">
+                        In mathematics, the logarithm is 
+                        the inverse operation to exponentiation, 
+                        just as division is the inverse of multiplication 
+                        and vice versa. That means the logarithm of a number is 
+                        the exponent to which another fixed number, the base, must 
+                        be raised to produce that number.
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <input id="inputLognumber" type="number" class="output-box">
+                    <div class="row">
+                        <div class="col-12 ">
+                            <button class="button" onclick="calculateLog2()">Log<sub>2</sub></button>
+                            <button class="button radious-bottom" onclick="calculateLog10()">Log<sub>10</sub></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid div2 color5">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Power</h1>
+                    <p class="pera1">
+                        In mathematics, an n is the power of a number x, 
+                        where n is usually assumed to be a positive integer, 
+                        is a number r which, when raised to the power x. 
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <input id="inputNumber" type="number" class="output-box" placeholder="Number">
+                    <input id="inputPower" type="number" class="output-box no-radious" placeholder="Power">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="button radious-bottom" onclick="calculatePower()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid div2 color6">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Root</h1>
+                    <p class="pera1">
+                        In mathematics, an nth root of a number x, 
+                        where n is usually assumed to be a positive integer, 
+                        is a number r which, when raised to the power n yields x. 
+                        The nth root of a number, x, is typically denoted as n√x
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <input id="inputRootnumber" type="number" class="output-box" placeholder="Number">
+                    <input id="inputRootpower" type="number" class="output-box no-radious" placeholder="Root power">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="button radious-bottom" onclick="calculateRoot()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conatiner-fluid style-div color7">
+            <div class="col-12 inner-style-div color6"></div>
+        </div>
+        <div class="container-fluid div2 color7">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Circle Area</h1>
+                    <p class="pera1">
+                        A circle is a simple closed shape. 
+                        It is the set of all points in a plane 
+                        that are at a given distance from a given 
+                        point, the centre. Equivalently, it is the 
+                        curve traced out by a point that moves so that 
+                        its distance from a given point is constant.
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <input id="circleRadious" type="number" class="output-box" placeholder="Circle Radious">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="button radious-bottom" onclick="calculateCirclearea()">Area</button>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid div2 color8">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Square Area</h1>
+                    <p class="pera1">
+                        In geometry, a square is a regular quadrilateral, 
+                        which means that it has four equal sides and four 
+                        equal angles (90-degree angles, or (100-gradian angles or right angles)). 
+                        It can also be defined as a rectangle in which two adjacent sides have equal length.
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <input id="squareLength" type="number" class="output-box" placeholder="Square Length">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="button radious-bottom" onclick="calculateSquarearea()">Area</button>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid div2 color9">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Triangle Area</h1>
+                    <p class="pera1">
+                        A triangle is a polygon with three edges and three vertices. 
+                        It is one of the basic shapes in geometry.
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <input id="triangleHeight" type="number" class="output-box" placeholder="Height">
+                    <input id="triangleBase" type="number" class="output-box no-radious" placeholder="Base">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="button radious-bottom" onclick="triangleArea()">Area</button>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conatiner-fluid style-div color10">
+            <div class="col-12 inner-style-div color9"></div>
+        </div>
+        <div class="container-fluid div2 color10">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Binary</h1>
+                    <p class="pera1">
+                        Binary number is a number expressed in the 
+                        base-2 numeral system or binary numeral system, 
+                        a method of mathematical expression which uses only 
+                        two symbols: typically "0" (zero) and "1" (one).
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <input id="inputBinary" type="number" class="output-box">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="button" onclick="binaryTodecimal()">Binary to Decimal</button>
+                            <button class="button radious-bottom" onclick="decimalTobinary()">Decimal to Binary</button>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid div2 color11">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1">
+                    <h1 class="heading2">Octal</h1>
+                    <p class="pera1">
+                        The octal numeral system, or oct for short, 
+                        is the base-8 number system, and uses the digits 0 to 7. 
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0">
+                    <input id="inputOctal" type="number" class="output-box">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="button" onclick="octalTodecimal()">Octal to Decimal</button>
+                            <button class="button radious-bottom" onclick="decimalTooctal()">Decimal to Octal</button>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="conatiner-fluid style-div color11">
+            <div class="col-12 inner-style-div color11"></div>
+        </div>
+        
+    <!--body-end-->
+    
+    <!--footer-start-->
+    <div class="container-fluid color12">
+        <div class="row">
+            <div class="col-10 offset-1">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="heading1">
+                            CONTACT ME
+                        </h1>
+                    </div>
+                    <div class="col-12 col-md-8 offset-md-2 col-lg-2 offset-lg-4">
+                        <img src="asset/image/profile.jpg" alt="" class="img-div">
+                    </div>
+                    <div class="col-12 margin col-lg-5">
+                        <h1 class="heading2 text-align-left">
+                            PHONE NUMBER
+                        </h1>
+                        <p class="pera1 text-align-left">
+                            01318106433
+                        </p>
+                        <p class="pera1 text-align-left">
+                            01939127879
+                        </p>
+                        <h1 class="heading2 text-align-left">
+                            EMAIL ADDRESS
+                        </h1>
+                        <p class="pera1 text-align-left">
+                            zazbah88@gmail.com
+                        </p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-end-->
+
+
+    <!--Bootstrap_JS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!--Fontawsome-->
+    <script src="https://kit.fontawesome.com/e6c688e1c2.js" crossorigin="anonymous"></script>
+    
+    <!--My_JavaScript-->
+    <script src="asset/js/Calculate.js"></script>
+    <script src="asset/js/Type.js"></script>
+    <script src="asset/js/Factorial.js"></script>
+    <script src="asset/js/Power.js"></script>
+    <script src="asset/js/Root.js"></script>
+    <script src="asset/js/Logarithm.js"></script>
+    <script src="asset/js/Circle.js"></script>
+    <script src="asset/js/Square.js"></script>
+    <script src="asset/js/Triangle.js"></script>
+    <script src="asset/js/DecimalToBinary.js"></script>
+    <script src="asset/js/BinaryToDecimal.js"></script>
+    <script src="asset/js/DecimalToOctal.js"></script>
+    <script src="asset/js/OctalToDecimal.js"></script>
+</body>
+</html>
