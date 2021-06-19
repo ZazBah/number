@@ -78,7 +78,6 @@ function binaryToHexadecimal(){
             nf = hexNumber2 * 16;
             a = Math.floor(nf);
             hexNumber2 = nf - a;
-            hexList2.push(a);
             
             if ( a == 10){
                 hexList2.push("A");
@@ -110,9 +109,7 @@ function binaryToHexadecimal(){
         else{
             var hex = hexResult1+"."+ hexResult2;
         }
-
-         output.val(hex);
-
+        output.val(hex);
     }
 
 }
