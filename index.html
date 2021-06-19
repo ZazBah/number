@@ -37,7 +37,7 @@
                         Algebra
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#Calculator">Calculator</a>
+                        <a class="dropdown-item" href="#Top">Calculator</a>
                         <a class="dropdown-item" href="#Type">Type</a>
                         <a class="dropdown-item" href="#Factorial">Factorial</a>
                         <a class="dropdown-item" href="#Logarithm">Logarithm</a>
@@ -60,15 +60,17 @@
                           Decoder
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#Decimal">Decimal</a>
                           <a class="dropdown-item" href="#Binary">Binary</a>
                           <a class="dropdown-item" href="#Octal">Octal</a>
+                          <a class="dropdown-item" href="#Hexadecimal">Hexadecimal</a>
                         </div>
                       </li>
                   </ul>
 
-                  <ul class="navbar-nav offset-lg-2 computer">
+                  <ul class="navbar-nav offset-lg-1 computer">
                     <li class="nav-item active">
-                        <a class="nav-link nav-font-style" href="#Claculator">Calculator</a>
+                        <a class="nav-link nav-font-style" href="#Top">Calculator</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link nav-font-style" href="#Type">Type</a>
@@ -95,13 +97,16 @@
                         <a class="nav-link nav-font-style" href="#Triangle">Triangle</a>
                     </li>
                     <li class="nav-item active">
+                        <a class="nav-link nav-font-style" href="#Decimal">Decimal</a>
+                    </li>
+                    <li class="nav-item active">
                         <a class="nav-link nav-font-style" href="#Binary">Binary</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link nav-font-style" href="#Octal">Octal</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link nav-font-style" href="#Top">Back to Top</a>
+                        <a class="nav-link nav-font-style" href="#Hexadecimal">Hexadecimal</a>
                     </li>
                   </ul>
 
@@ -426,6 +431,31 @@
         <div class="conatiner-fluid style-div color10">
             <div class="col-12 inner-style-div color9 col-position1"></div>
         </div>
+
+    <section id="Decimal">
+        <div class="container-fluid div2 color10">
+            <div class="row no-margin-row">
+                <div class="col-10 offset-1 col-lg-5 offset-lg-1 col-position">
+                    <h1 class="heading2">Decimal</h1>
+                    <p class="pera1">
+                        The decimal numeral system  
+                        is the standard system for denoting integer and non-integer numbers. 
+                        It is the extension to non-integer numbers of the Hindu–Arabic numeral system.
+                    </p>
+                </div>
+                <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0 col-position">
+                    <input id="inputDecimal" type="text" class="output-box">
+                    <div class="row">
+                        <div class="col-12 col-position">
+                            <button class="button" onclick="decimalTobinary()">Decimal to Binary</button>
+                            <button class="button" onclick="decimalTooctal()">Decimal to Octal</button>
+                            <button class="button radious-bottom" onclick="decimalTohexadecimal()">Decimal to Hexadecimal</button>
+                        </div>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <section id="Binary">
         <div class="container-fluid div2 color10">
@@ -440,11 +470,12 @@
                     </p>
                 </div>
                 <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0 col-position">
-                    <input id="inputBinary" type="number" class="output-box">
+                    <input id="inputBinary" type="text" class="output-box">
                     <div class="row">
                         <div class="col-12 col-position">
                             <button class="button" onclick="binaryTodecimal()">Binary to Decimal</button>
-                            <button class="button radious-bottom" onclick="decimalTobinary()">Decimal to Binary</button>
+                            <button class="button" onclick="binaryToOctal()">Binary to Octal</button>
+                            <button class="button radious-bottom" onclick="binaryToHexadecimal()">Binary to Hexadecimal</button>
                         </div>                 
                     </div>
                 </div>
@@ -463,16 +494,46 @@
                     </p>
                 </div>
                 <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0 col-position">
-                    <input id="inputOctal" type="number" class="output-box">
+                    <input id="inputOctal" type="text" class="output-box">
                     <div class="row">
                         <div class="col-12 col-position">
                             <button class="button" onclick="octalTodecimal()">Octal to Decimal</button>
-                            <button class="button radious-bottom" onclick="decimalTooctal()">Decimal to Octal</button>
+                            <button class="button" onclick="octalToBinary()">Octal to Binary</button>
+                            <button class="button radious-bottom" onclick="octalToHexadecimal()">Octal to Hexadecimal</button>
                         </div>                 
                     </div>
                 </div>
             </div>
         </div>
+
+        <section id="Hexadecimal">
+            <div class="container-fluid div2 color11">
+                <div class="row no-margin-row">
+                    <div class="col-10 offset-1 col-lg-5 offset-lg-1 col-position">
+                        <h1 class="heading2">Hexadecimal</h1>
+                        <p class="pera1">
+                            The hexadecimal numeral system, 
+                            often shortened to "hex", 
+                            is a numeral system made up of 16 symbols (base 16). 
+                            The standard numeral system is called decimal (base 10) 
+                            and uses ten symbols: 0,1,2,3,4,5,6,7,8,9. Hexadecimal uses 
+                            the decimal numbers and six extra symbols. There are no numerical 
+                            symbols that represent values greater than nine, so letters taken from 
+                            the English alphabet are used, specifically A, B, C, D, E and F. 
+                        </p>
+                    </div>
+                    <div class="col-10 offset-1 col-md-6 offset-md-3 col-lg-3 offset-lg-0 col-position">
+                        <input id="inputHexadecimal" type="text" class="output-box">
+                        <div class="row">
+                            <div class="col-12 col-position">
+                                <button class="button" onclick="hexadecimalToDecimal()">Hexadecimal to Decimal</button>
+                                <button class="button" onclick="hexadecimalToBinary()">Hexadecimal to Binary</button>
+                                <button class="button radious-bottom" onclick="hexadecimalToOctal()">Hexadecimal to Octal</button>
+                            </div>                 
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div class="conatiner-fluid style-div color11">
             <div class="col-12 inner-style-div color11 col-position"></div>
         </div>
@@ -527,19 +588,40 @@
     <script src="https://kit.fontawesome.com/e6c688e1c2.js" crossorigin="anonymous"></script>
     
     <!--My_JavaScript-->
-    <script src="asset/js/Calculate.js"></script>
-    <script src="asset/js/Type.js"></script>
-    <script src="asset/js/Factorial.js"></script>
-    <script src="asset/js/Power.js"></script>
-    <script src="asset/js/Root.js"></script>
-    <script src="asset/js/Logarithm.js"></script>
-    <script src="asset/js/Circle.js"></script>
-    <script src="asset/js/Square.js"></script>
-    <script src="asset/js/Triangle.js"></script>
-    <script src="asset/js/DecimalToBinary.js"></script>
-    <script src="asset/js/BinaryToDecimal.js"></script>
-    <script src="asset/js/DecimalToOctal.js"></script>
-    <script src="asset/js/OctalToDecimal.js"></script>
-    <script src="asset/js/StickyNav.js"></script>
+        <!--algebra-js-->
+            <script src="asset/js/algebra/Calculate.js"></script>
+            <script src="asset/js/algebra/Type.js"></script>
+            <script src="asset/js/algebra/Factorial.js"></script>
+            <script src="asset/js/algebra/Power.js"></script>
+            <script src="asset/js/algebra/Root.js"></script>
+            <script src="asset/js/algebra/Logarithm.js"></script>
+
+        <!--geometry-js-->
+            <script src="asset/js/geometry/Circle.js"></script>
+            <script src="asset/js/geometry/Square.js"></script>
+            <script src="asset/js/geometry/Triangle.js"></script>
+
+    <!--decoder-js-->
+        <!--decimal-js-->
+            <script src="asset/js/decoder/decimal/DecimalToBinary.js"></script>
+            <script src="asset/js/decoder/decimal/DecimalToOctal.js"></script>
+            <script src="asset/js/decoder/decimal/DecimalToHexadecimal.js"></script>
+
+        <!--binary-js-->
+            <script src="asset/js/decoder/binary/BinaryToDecimal.js"></script>
+            <script src="asset/js/decoder/binary/BinaryToOctal.js"></script>
+            <script src="asset/js/decoder/binary/BinaryToHexadecimal.js"></script>
+        <!--octal-js-->
+            <script src="asset/js/decoder/octal/OctalToDecimal.js"></script>
+            <script src="asset/js/decoder/octal/OctalToBinary.js"></script>
+            <script src="asset/js/decoder/octal/OctalToHexadecimal.js"></script>
+
+        <!--hexadecimal-js-->
+            <script src="asset/js/decoder/hexadecimal/HexadecimalToDecimal.js"></script>
+            <script src="asset/js/decoder/hexadecimal/HexadecimalToBinary.js"></script>
+            <script src="asset/js/decoder/hexadecimal/HexadecimalToOctal.js"></script>
+
+        <!--Style-js-->
+            <script src="asset/js/StickyNav.js"></script>
 </body>
 </html>
