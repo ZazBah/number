@@ -62,7 +62,7 @@ function decimalTohexadecimal(){
                     list2.push("F");
                 } else {
                     list2.push(a);
-                }
+                } 
             }
         }
         var result2 = list2.join("");
