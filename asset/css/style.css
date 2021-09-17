@@ -12,6 +12,7 @@ body{
 }
 .nav-style{
    background-color: #3498DB !important;
+   z-index: 1;
 }
 .nav-font-style{
     color: #FDFEFE !important;
